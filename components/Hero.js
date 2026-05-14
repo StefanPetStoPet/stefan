@@ -21,29 +21,29 @@ export default function Hero() {
 
   const baseStartX = -900;
 
-  const h1s = [
-    {
-      text: "Dizajnirano s ukusom",
-      className:
-        "text-[3.8rem] md:text-[4.6rem] font-light leading-none mb-10",
-      finalX: -240,
-      opacity: 0.85,
-    },
-    {
-      text: "Izrađeno s iskustvom",
-      className:
-        "text-[4.6rem] md:text-[5.6rem] font-light leading-none my-1 mb-10",
-      finalX: 0,
-      opacity: 1,
-    },
-    {
-      text: "Stvoreno za rezultate",
-      className:
-        "text-[4.2rem] md:text-[5.2rem] font-light leading-none",
-      finalX: 200,
-      opacity: 0.85,
-    },
-  ];
+ const h1s = [
+  {
+    text: "Dizajnirano s ukusom",
+    className:
+      "text-[clamp(2.7rem,5vw,6.5rem)] font-light leading-none mb-10",
+    finalX: -240,
+    opacity: 0.85,
+  },
+  {
+    text: "Izrađeno sa iskustvom",
+    className:
+      "text-[clamp(3rem,6vw,7rem)] font-light leading-none my-1 mb-10",
+    finalX: 0,
+    opacity: 1,
+  },
+  {
+    text: "Stvoreno za rezultate",
+    className:
+      "text-[clamp(2.7rem,5.5vw,6.5rem)] font-light leading-none",
+    finalX: 200,
+    opacity: 0.85,
+  },
+];
 
   // calculate longest animation time so bottom appears after ALL H1s finish
   const maxDuration = Math.max(
@@ -77,7 +77,7 @@ export default function Hero() {
       {/* <div className="absolute inset-0 bg-black/15" /> */}
 
       {/* HERO WRAPPER */}
-      <div className="relative w-full h-full flex flex-col items-center justify-start px-10 pt-5">
+      <div className="relative w-full h-full flex flex-col items-center justify-start px-10 pt-[clamp(2rem,7vh,6rem)]">
 
         {/* TEXT */}
         <div className="fixed flex flex-col items-center text-[#f5f5f5]">
@@ -131,7 +131,8 @@ export default function Hero() {
           </div>
 
           {/* RIGHT CTA */}
-          <div
+          <a
+  href="#contact"
   className="fixed bottom-6 right-6 flex bg-[#fafafa] rounded-lg overflow-hidden shadow-lg shrink-0"
   style={{
     opacity: showBottom ? 1 : 0,
@@ -156,7 +157,10 @@ export default function Hero() {
                 />
               </div>
             </div>
-          </div>
+          </a>
+
+
+
 
         </div>
       </div>
