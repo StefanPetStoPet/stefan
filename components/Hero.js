@@ -12,12 +12,19 @@ export default function Hero() {
   }, []);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setHeroImg((prev) => (prev === 0 ? 1 : 0));
-    }, 500);
+  const interval = setInterval(() => {
+    setHeroImg((prev) => (prev + 1) % 4);
+  }, 700);
 
-    return () => clearInterval(interval);
-  }, []);
+  return () => clearInterval(interval);
+}, []);
+
+const images = [
+  "/vina.png",
+  "/amigurumi.png",
+  "/asa2.png",
+  "/biju3.png"
+];
 
   const baseStartX = -900;
 
@@ -113,7 +120,7 @@ export default function Hero() {
 
           {/* LEFT TEXT */}
           <div
-            className="fixed w-[420px] text-[#f5f5f5]"
+            className="fixed bottom-6 left-6 w-[420px] text-[#f5f5f5]"
             style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               opacity: showBottom ? 1 : 0,
@@ -132,7 +139,7 @@ export default function Hero() {
 
           {/* RIGHT CTA */}
           <a
-  href="#contact"
+  href="#work"
   className="fixed bottom-6 right-6 flex bg-[#fafafa] rounded-lg overflow-hidden shadow-lg shrink-0"
   style={{
     opacity: showBottom ? 1 : 0,
@@ -151,7 +158,7 @@ export default function Hero() {
             <div className="p-2 bg-[#dcdee3]">
               <div className="w-[180px] h-[80px] overflow-hidden rounded-md">
                 <img
-                  src={heroImg === 0 ? "/mockup.png" : "/mockup1.png"}
+                  src={images[heroImg]}
                   className="w-full h-full object-cover"
                   alt="preview"
                 />

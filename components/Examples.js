@@ -1,24 +1,29 @@
 export default function ProductsSection() {
   const items = [
     {
-      img: "/asa.png",
+      img: "/asa2.png",
       video: "/videos/agencyv.mp4",
       link: "https://anchor-support-agency.vercel.app/",
     },
     {
-      img: "/bijul.png",
+      img: "/biju3.png",
       video: "/videos/bijuv.mp4",
       link: "https://biju-sand.vercel.app/",
     },
     {
-      img: "/raznatovic.png",
+      img: "/vina.png",
       video: "/videos/vinav.mp4",
       link: "https://vinarijaraznatovic.vercel.app/",
+    },
+    {
+      img: "/amigurumi.png",
+      video: "/videos/siveniv.mp4",
+      link: "https://siveni.myshopify.com/",
     },
   ];
 
   return (
-    <section className="w-full relative">
+    <section id="work" className="w-full relative">
       <div className="mx-auto px-6 py-8 bg-[linear-gradient(230deg,_#e6eaff,_#e6eefa_25%,_#e3f2f9_64%,_#d6f6ff)]">
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

@@ -174,10 +174,10 @@ To mi omogućava da stalno unapređujem rezultate — pretvarajući dobre rezult
 
             <div className="mb-6">
               <h2 className="text-2xl font-semibold text-black/85">
-                How I help you get results
+                Moj proces
               </h2>
               <p className="text-black/50 text-sm mt-1">
-                Approach, strategy and results
+                Pristup, strategija i rezultati
               </p>
             </div>
 
@@ -187,7 +187,7 @@ To mi omogućava da stalno unapređujem rezultate — pretvarajući dobre rezult
                 onClick={() => setActiveItem(index)}
                 className="group cursor-pointer flex items-start gap-4 p-4 rounded-xl border border-white/10 bg-blue-600/3 hover:bg-[#e6eaff]/100 transition"
               >
-                <div className="text-xl text-blue-600/100 group-hover:text-white transition">
+                <div className="text-xl text-blue-600/100 transition">
                   {item.icon}
                 </div>
 
@@ -216,17 +216,17 @@ To mi omogućava da stalno unapređujem rezultate — pretvarajući dobre rezult
 
             <button
               onClick={() => setActiveItem(null)}
-              className="mb-6 text-black/50 hover:text-white transition text-sm"
+              className="mb-6 text-black/50 hover:text-black transition text-sm"
             >
-              ← Back
+              ← Nazad
             </button>
 
             <div className="flex items-center gap-3 mb-2">
-              <div className="text-xl text-black">
+              <div className="text-xl text-blue-600/100">
                 {items[activeItem].icon}
               </div>
 
-              <h3 className="text-xl font-semibold text-black">
+              <h3 className="text-xl font-semibold text-blue-600/100">
                 {items[activeItem].title}
               </h3>
             </div>

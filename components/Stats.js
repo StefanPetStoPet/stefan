@@ -54,13 +54,13 @@ const ScrollRevealText = () => {
   const ref = useRef(null);
 
   const text =
-    "Pomažem biznisima da povećaju konverzije kroz CRO-redizajn koji poboljšava UX. SEO optimizacija donosi kvalitetan saobraćaj koji konvertuje. Smanjujem napuštene korpe i trenje kako bismo maksimalno povećali prihod.";
-
+  "Kao što ljudi često procijene kvalitet restorana po tome koliko profesionalno izgleda, isto važi i za web sajt. Dobar dizajn nije samo estetika — on utiče na to kako ljudi doživljavaju vaš biznis, koliko vam vjeruju i gradi jače povjerenje u vaše usluge. Kroz primjenu provjerenih praksi, baziranih na analitici ponašanja korisnika (kao što su heatmapovi i drugi podaci), posjetioci se bolje usmjeravaju kroz sadržaj i lakše dolaze do odluke da vas kontaktiraju ili kupe vaš proizvod. To je cilj svakog mog rada";
+  
   const words = text.split(" ");
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 0.85", "start 0.4"],
+    offset: ["start 0.6", "start 0.1"],
   });
 
   return (
@@ -100,25 +100,25 @@ const Word = ({ word, scrollYProgress, start, end }) => {
 
 export default function StatsSection() {
   const stats = [
-    {
-      value: "2–3×",
-      title: "Veća stopa konverzije",
-      desc: "Dobro dizajnirani sajtovi pretvaraju više posjetilaca u klijente.",
-    },
-    {
-      value: "+10–30%",
-      title: "Veća vrijednost narudžbi",
-      desc: "Bolja struktura i UX prirodno vode ka većoj kupovini.",
-    },
-    {
-      value: "Do 2×",
-      title: "Veći prihod po posjetiocu",
-      desc: "Kombinacija UX-a, CRO-a i jasnoće donosi bolje ukupne rezultate.",
-    },
-  ];
+  {
+    value: "Optimizacija konverzija",
+    title: "Veća prodaja sa istim brojem posjetilaca — sajtovi su napravljeni da pretvaraju više posjetilaca u kupce.",
+    desc: "",
+  },
+  {
+    value: "UX optimizacija",
+    title: "Jednostavniji korisnički put — jasna struktura pomaže korisnicima da brže pronađu ono što traže i lakše donesu odluku.",
+    desc: "",
+  },
+  {
+    value: "Data-driven pristup",
+    title: "Kontinuirano unapređenje performansi — sajt se stalno poboljšava na osnovu ponašanja korisnika i podataka.",
+    desc: "",
+  },
+];
 
   return (
-    <section className="relative z-10 w-full rounded-t-[50px] bg-gradient-to-br from-[#00003f] via-[#1206b6] to-[#4508c0]">
+    <section className="relative z-10 w-full rounded-t-[50px] bg-gradient-to-br from-blue-500 via-indigo-600 to-indigo-900">
       
 <div
   className="w-full"
@@ -150,18 +150,18 @@ export default function StatsSection() {
           variants={lineVariant}
           className="text-4xl md:text-6xl font-semibold text-white"
         >
-          Dizajn nije samo izgled
+          Samo postojanje sajta ne prodaje
         </motion.h2>
       </div>
 
       {/* Line 2 */}
-      <div className="overflow-hidden mt-2">
+      <div className="mt-2">
         <motion.span
           custom={1}
           variants={lineVariant}
           className="text-3xl md:text-5xl text-white block"
         >
-          Radi se o rezultatima
+          već njegov kvalitet
         </motion.span>
       </div>
     </motion.div>
@@ -181,11 +181,11 @@ export default function StatsSection() {
           variants={item}
           className="backdrop-blur-xl bg-white/10 border border-white/10 rounded-3xl mx-5 md:mx-0 p-8 shadow-[0_5px_20px_rgba(255,255,255,0.25)] text-center"
         >
-          <div className="text-5xl font-semibold text-white mb-4">
+          <div className="text-4xl font-semibold text-white mb-4">
             {stat.value}
           </div>
 
-          <h3 className="text-xl text-white font-medium mb-2">
+          <h3 className="text-xl text-white/80 font-medium mb-2">
             {stat.title}
           </h3>
 
