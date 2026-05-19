@@ -56,7 +56,7 @@ export default function ProjectShowcase({
     icon: <FaLightbulb />,
     title: "Analiza ciljane publike",
     subtitle: "Razumijevanje za koga dizajniramo",
-    text: `Svaki projekat počinje razumijevanjem vaše publike.
+    text: `Svaki projekat počinje analiziranjem vaše publike.
 
 Analiziram ponašanje korisnika, njihova očekivanja i namjeru — šta traže, šta ih motiviše i šta ih dovodi do konverzije.
 
@@ -64,8 +64,8 @@ Kombinovanjem toga sa analizom konkurencije i provjerenim obrascima, gradim jasn
   },
   {
     icon: <FaChartLine />,
-    title: "Dizajn za konverzije",
-    subtitle: "Ne samo vizuelno — već i performanse",
+    title: "CRO Dizajn",
+    subtitle: "Dizajn koji pretvara pažnju u prodaju",
     text: `Dizajn nije tu da samo izgleda dobro — već da vodi korisnika ka akciji.
 
 Strukturiram layout, hijerarhiju i tokove na osnovu CRO principa:
@@ -73,32 +73,37 @@ Strukturiram layout, hijerarhiju i tokove na osnovu CRO principa:
 • jaka vizuelna hijerarhija  
 • jednostavno korisničko iskustvo  
 
-Svaki element ima svoju svrhu — da poveća angažman, povjerenje i konverzije.`,
+Svaki element ima svoju svrhu — da poveća angažman, povjerenje i prodaju.`,
   },
   {
     icon: <FaProjectDiagram />,
-    title: "Razvoj",
+    title: "Implementacija",
     subtitle: "Od dizajna do gotovog proizvoda",
-    text: `Nakon što definišem dizajn u Figmi, pretvaram ga u funkcionalan proizvod kroz razvoj.
+    text: `Nakon što definišem dizajn u Figmi, pretvaram ga u funkcionalan proizvod kroz programiranje, bez gotovih template rješenja.
 
-Uglavnom radim sa Shopify-jem, kreirajući brze, responzivne i skalabilne sajtove koji u potpunosti prate dizajn.
+Fokus je na performansama, SEO i AEO strukturi, sigurnosti i skalabilnosti.
 
-Pošto razumijem i dizajn i development, proces je mnogo glađi — bez praznina i nesporazuma, samo čista realizacija.`,
-  },
+Koristim Next.js, Tailwind i Supabase za custom web rješenja, a Shopify za e-commerce projekte.
+
+Pošto razumijem i dizajn i development, cijeli proces je usklađen i bez kompromisa u kvalitetu.`,
+},
   {
     icon: <FaRocket />,
     title: "Odravanje + Analitika i optimizacija",
     subtitle: "Kontinuirano poboljšavanje",
     text: `Lansiranje je tek početak.
 
-Analiziram kako korisnici koriste sajt i identifikujem mogućnosti za poboljšanje.
+Analiziram kako korisnici koriste sajt koristeći alate kao što su Google Analytics 4 (GA4), Google Tag Manager, heatmaps (Clarity/Hotjar) i event tracking, kako bih identifikovao mogućnosti za poboljšanje.
 
-• praćenje ponašanja  
-• uvidi u konverzije  
-• optimizacija performansi  
+Ovo je ključno jer odluke više nisu zasnovane na pretpostavkama, već na stvarnom ponašanju korisnika i podacima koji direktno utiču na konverzije.
 
-To mi omogućava da stalno unapređujem rezultate — pretvarajući dobre rezultate u još bolje tokom vremena.`,
-  },
+• praćenje ponašanja korisnika kroz heatmaps i evente  
+• uvidi u konverzije i funnel analitiku  
+• optimizacija performansi i stabilnosti (Core Web Vitals, Sentry)  
+• testiranje i iteracije za bolje rezultate  
+
+Cilj je kontinuirano unapređenje performansi i konverzija tokom vremena.`,
+},
 ];
 
   return (
@@ -177,7 +182,7 @@ To mi omogućava da stalno unapređujem rezultate — pretvarajući dobre rezult
                 Moj proces
               </h2>
               <p className="text-black/50 text-sm mt-1">
-                Pristup, strategija i rezultati
+                analiza, dizajn, izrada, CRO
               </p>
             </div>
 

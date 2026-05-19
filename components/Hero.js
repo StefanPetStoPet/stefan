@@ -30,7 +30,7 @@ const images = [
 
  const h1s = [
   {
-    text: "Dizajnirano s ukusom",
+    text: "Dizajnirano sa ukusom",
     className:
       "text-[clamp(2.7rem,5vw,6.5rem)] font-light leading-none mb-10",
     finalX: -240,
@@ -69,7 +69,7 @@ const images = [
   }, []);
 
   return (
-    <section className="relative h-screen overflow-hidden pt-16">
+    <section className="relative min-h-[100svh] overflow-hidden pt-16">
       {/* Background Video */}
       {/* <video
         className="absolute inset-0 w-full h-full object-cover"
@@ -132,9 +132,7 @@ const images = [
 </p>
 
 <p className="text-xl text-[#f5f5f5]/90 leading-relaxed">
-  Ucim o vasem nacinu poslovanja,
-  razmišljam strateški i dizajniram iskustva koja su napravljena da podstaknu akciju — pretvarajući posjetioce u klijente.
-</p>
+  Svaki vlasnik online biznisa s vremenom shvati da snažan vizuelni identitet gradi povjerenje i stvara veću zaradu. Ali mnogi ne prepoznaju da strategija ima još veći uticaj.</p>
           </div>
 
           {/* RIGHT CTA */}

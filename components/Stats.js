@@ -54,8 +54,7 @@ const ScrollRevealText = () => {
   const ref = useRef(null);
 
   const text =
-  "Kao što ljudi često procijene kvalitet restorana po tome koliko profesionalno izgleda, isto važi i za web sajt. Dobar dizajn nije samo estetika — on utiče na to kako ljudi doživljavaju vaš biznis, koliko vam vjeruju i gradi jače povjerenje u vaše usluge. Kroz primjenu provjerenih praksi, baziranih na analitici ponašanja korisnika (kao što su heatmapovi i drugi podaci), posjetioci se bolje usmjeravaju kroz sadržaj i lakše dolaze do odluke da vas kontaktiraju ili kupe vaš proizvod. To je cilj svakog mog rada";
-  
+  "Pošto je kvalitet često teško procijeniti unaprijed, ljudi se oslanjaju na prezentaciju brenda kao pokazatelj vrijednosti, pouzdanosti i kvaliteta proizvoda ili usluge. Isto važi i za web sajt — dobar dizajn gradi povjerenje u vaš biznis i usluge, a kroz provjerene prakse i analitiku ponašanja korisnika, posjetioci se lakše usmjeravaju ka kontaktu ili kupovini. To je cilj svakog mog rada.";
   const words = text.split(" ");
 
   const { scrollYProgress } = useScroll({
@@ -101,18 +100,21 @@ const Word = ({ word, scrollYProgress, start, end }) => {
 export default function StatsSection() {
   const stats = [
   {
-    value: "Optimizacija konverzija",
-    title: "Veća prodaja sa istim brojem posjetilaca — sajtovi su napravljeni da pretvaraju više posjetilaca u kupce.",
+    value: "Veća prodaja sa istim brojem posjetilaca",
+    title:
+      "CRO optimizacija sajta povećava broj kupaca bez dodatnog ulaganja u reklame.",
     desc: "",
   },
   {
-    value: "UX optimizacija",
-    title: "Jednostavniji korisnički put — jasna struktura pomaže korisnicima da brže pronađu ono što traže i lakše donesu odluku.",
+    value: "Jednostavniji korisnički put",
+    title:
+      "Jasna UX struktura pomaže korisnicima da brže pronađu informacije i lakše donesu odluku.",
     desc: "",
   },
   {
-    value: "Data-driven pristup",
-    title: "Kontinuirano unapređenje performansi — sajt se stalno poboljšava na osnovu ponašanja korisnika i podataka.",
+    value: "Kontinuirano unapređenje performansi",
+    title:
+      "Sajt se optimizuje na osnovu analitike, ponašanja korisnika i testiranja performansi.",
     desc: "",
   },
 ];
@@ -150,7 +152,7 @@ export default function StatsSection() {
           variants={lineVariant}
           className="text-4xl md:text-6xl font-semibold text-white"
         >
-          Samo postojanje sajta ne prodaje
+          Nije dovoljno samo imati sajt
         </motion.h2>
       </div>
 
@@ -161,7 +163,7 @@ export default function StatsSection() {
           variants={lineVariant}
           className="text-3xl md:text-5xl text-white block"
         >
-          već njegov kvalitet
+          već kvalitetan sajt koji doprinosi rastu poslovanja
         </motion.span>
       </div>
     </motion.div>

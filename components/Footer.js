@@ -12,7 +12,7 @@ export default function Footer() {
       color: "from-green-400 to-green-600",
       text: "Odgovor u roku od 60 minuta.",
       value: "Poruka na WhatsApp",
-      action: "https://wa.me/381XXXXXXXX",
+      action: "https://wa.me/38269458654",
     },
     email: {
       title: "Email",
@@ -26,9 +26,9 @@ export default function Footer() {
       title: "Poziv",
       icon: "mdi:phone",
       color: "from-blue-400 to-indigo-600",
-      text: "Direktan razgovor za brze dogovore.",
+      text: "Direktan razgovor za duze dogovore.",
       value: "+382 69 458 654",
-      action: "tel:+381XXXXXXXX",
+      action: "tel:+38269458654",
     },
   };
 
@@ -153,7 +153,7 @@ export default function Footer() {
 
         {/* FOOTER NOTE */}
         <p className="mt-8 text-white/40 text-sm text-center">
-          Stvorimo zajedno nešto što vrijedi
+          Ozbiljan biznis zahtijeva više od prosječnog sajta
         </p>
       </div>
     </section>
