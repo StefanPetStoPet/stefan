@@ -54,7 +54,7 @@ const ScrollRevealText = () => {
   const ref = useRef(null);
 
   const text =
-  "Pošto je kvalitet često teško procijeniti unaprijed, ljudi se oslanjaju na prezentaciju brenda kao pokazatelj vrijednosti, pouzdanosti i kvaliteta proizvoda ili usluge. Isto važi i za web sajt — dobar dizajn gradi povjerenje u vaš biznis i usluge, a kroz provjerene prakse i analitiku ponašanja korisnika, posjetioci se lakše usmjeravaju ka kontaktu ili kupovini. To je cilj svakog mog rada.";
+  "Pošto je kvalitet često teško procijeniti unaprijed, ljudi se oslanjaju na prezentaciju brenda kao pokazatelj vrijednosti, pouzdanosti i kvaliteta proizvoda ili usluge. Isto važi i za veb-sajt, dobar dizajn gradi povjerenje u vaš biznis i usluge, a kroz provjerene prakse i analitiku ponašanja korisnika, posjetioci se lakše usmjeravaju ka kontaktu ili kupovini. To je cilj svakog mog rada.";
   const words = text.split(" ");
 
   const { scrollYProgress } = useScroll({
@@ -65,7 +65,7 @@ const ScrollRevealText = () => {
   return (
     <p
       ref={ref}
-      className="max-w-5xl pt-10 pb-30 mx-auto text-center mt-10 text-white/90 text-3xl md:text-3xl leading-relaxed flex flex-wrap justify-center gap-x-2"
+      className="max-w-5xl pl-5 pr-5 pt-10 pb-30 mx-auto text-center mt-10 text-white/90 text-2xl md:text-3xl leading-relaxed flex flex-wrap justify-center gap-x-2"
     >
       {words.map((word, i) => {
         const start = i / words.length;
@@ -163,7 +163,7 @@ export default function StatsSection() {
           variants={lineVariant}
           className="text-3xl md:text-5xl text-white block"
         >
-          već kvalitetan sajt koji doprinosi rastu poslovanja
+          već sistem koji doprinosi rastu poslovanja
         </motion.span>
       </div>
     </motion.div>

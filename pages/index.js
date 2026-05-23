@@ -37,8 +37,8 @@ export default function Home() {
   const mobileImages = [
   "/mobile1.png",
   "/mobile2.png",
-  "/mobile1.png",
-  "/mobile2.png",
+  "/mobile3.png",
+  "/mobile4.png",
 ];
 
   const [projectImg, setProjectImg] = useState(0);

@@ -67,16 +67,16 @@ export default function Footer() {
         <div className="w-full max-w-3xl backdrop-blur-xl bg-white/5 border border-white/20 rounded-2xl p-6 shadow-2xl">
 
           {/* Tabs */}
-          <div className="flex gap-3 justify-center mb-6">
+          <div className="flex flex-wrap gap-2 justify-center mb-6">
             {Object.keys(contacts).map((key) => (
               <button
                 key={key}
                 onClick={() => setActive(key)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300 ${
-                  active === key
-                    ? tabColors[key]
-                    : "bg-white/10 text-white hover:bg-white/20"
-                }`}
+                className={`flex items-center gap-2 px-3 md:px-4 py-2 rounded-xl transition-all duration-300 text-sm md:text-base whitespace-nowrap ${
+  active === key
+    ? tabColors[key]
+    : "bg-white/10 text-white hover:bg-white/20"
+}`}
               >
                 <Icon icon={contacts[key].icon} className="text-xl" />
                 {contacts[key].title}
@@ -102,7 +102,7 @@ export default function Footer() {
               </p>
 
               <p className="text-white/70 text-sm">
-                Odgovaram u roku od nekoliko sati — najbrže preko WhatsApp-a.
+                Odgovaram u roku od par sati — najbrže preko WhatsApp-a.
               </p>
             </div>
 

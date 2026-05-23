@@ -89,7 +89,7 @@ Pošto razumijem i dizajn i development, cijeli proces je usklađen i bez kompro
 },
   {
     icon: <FaRocket />,
-    title: "Odravanje + Analitika i optimizacija",
+    title: "Održavanje + Analitika i optimizacija",
     subtitle: "Kontinuirano poboljšavanje",
     text: `Lansiranje je tek početak.
 
@@ -151,7 +151,7 @@ Cilj je kontinuirano unapređenje performansi i konverzija tokom vremena.`,
       h-[400px]
       max-w-[400px]
       mx-auto
-      object-cover
+      object-contain
       rounded-xl
     "
   />

@@ -36,7 +36,9 @@ export default function ProductsSection() {
               rel="noopener noreferrer"
               className="group relative overflow-hidden rounded-2xl shadow-lg h-[350px] block"
             >
-
+<div className="absolute top-0 left-0 w-full h-10 z-20 flex items-center justify-between px-4 bg-black/1 backdrop-blur-xs text-white text-sm tracking-wide">
+  <span>↗ Posjeti sajt</span>
+</div>
               {/* IMAGE */}
               <img
                 src={item.img}
