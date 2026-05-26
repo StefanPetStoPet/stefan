@@ -65,7 +65,7 @@ const ScrollRevealText = () => {
   return (
     <p
       ref={ref}
-      className="max-w-5xl pl-5 pr-5 pt-10 pb-30 mx-auto text-center mt-10 text-white/90 text-2xl md:text-3xl leading-relaxed flex flex-wrap justify-center gap-x-2"
+      className="max-w-5xl pl-5 pr-5 md:pt-10 pb-30 mx-auto text-center mt-10 text-white/90 text-2xl md:text-3xl leading-relaxed flex flex-wrap justify-center gap-x-2"
     >
       {words.map((word, i) => {
         const start = i / words.length;
@@ -131,7 +131,7 @@ export default function StatsSection() {
   }}
 >
   <div className="relative max-w-6xl mx-auto pt-16 pb-8 flex flex-col items-center gap-16">
-      <div className="max-w-6xl mx-auto pt-16 flex flex-col items-center gap-16">
+      <div className="max-w-6xl mx-auto pt-8 md:pt-16 flex flex-col items-center gap-16">
 
 
 
@@ -161,7 +161,7 @@ export default function StatsSection() {
         <motion.span
           custom={1}
           variants={lineVariant}
-          className="text-3xl md:text-5xl text-white block"
+          className="text-2xl md:text-5xl text-white block"
         >
           već sistem koji doprinosi rastu poslovanja
         </motion.span>
@@ -170,33 +170,42 @@ export default function StatsSection() {
   
 
         {/* STATS */}
-        <motion.div
-      className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full"
-      variants={container}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.3 }}
+       
+<div className="w-screen relative left-1/2 -translate-x-1/2 md:w-full md:left-0 md:translate-x-0 overflow-hidden md:overflow-visible">
+  <motion.div
+  className="flex md:grid md:grid-cols-3 md:gap-8
+             overflow-x-scroll md:overflow-visible
+             snap-x snap-mandatory md:snap-none
+             scrollbar-hide
+             px-5 md:px-0"
+  variants={container}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true, amount: 0.3 }}
+>
+  {stats.map((stat, index) => (
+    <motion.div
+      key={index}
+      variants={item}
+      className="snap-center shrink-0
+                 w-[80vw] md:w-auto
+                 backdrop-blur-xl bg-white/10 border border-white/10
+                 rounded-3xl p-8 mr-4 last:mr-0 md:mr-0
+                 md:shadow-[0_5px_20px_rgba(255,255,255,0.25)] text-center"
     >
-      {stats.map((stat, index) => (
-        <motion.div
-          key={index}
-          variants={item}
-          className="backdrop-blur-xl bg-white/10 border border-white/10 rounded-3xl mx-5 md:mx-0 p-8 shadow-[0_5px_20px_rgba(255,255,255,0.25)] text-center"
-        >
-          <div className="text-4xl font-semibold text-white mb-4">
-            {stat.value}
-          </div>
-
-          <h3 className="text-xl text-white/80 font-medium mb-2">
-            {stat.title}
-          </h3>
-
-          <p className="text-white/60 text-sm leading-relaxed">
-            {stat.desc}
-          </p>
-        </motion.div>
-      ))}
+      <div className="text-2xl md:text-4xl font-semibold text-white mb-4">
+        {stat.value}
+      </div>
+      <h3 className="text-md md:text-xl text-white/80 font-medium mb-2">
+        {stat.title}
+      </h3>
+      <p className="text-white/60 text-sm leading-relaxed">
+        {stat.desc}
+      </p>
     </motion.div>
+    ))}
+  </motion.div>
+</div>
 </div>
 </div>
  </div>

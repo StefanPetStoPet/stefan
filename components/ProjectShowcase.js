@@ -109,7 +109,7 @@ Cilj je kontinuirano unapređenje performansi i konverzija tokom vremena.`,
   return (
     <section
   ref={sectionRef}
-  className="overflow-x-hidden relative min-h-screen py-24 w-full bg-[linear-gradient(230deg,_#e6eaff,_#e6eefa_25%,_#e3f2f9_64%,_#d6f6ff)]"
+  className="overflow-x-hidden relative min-h-screen py-10 md:py-24 w-full bg-[linear-gradient(230deg,_#e6eaff,_#e6eefa_25%,_#e3f2f9_64%,_#d6f6ff)]"
 >
       <div className="max-w-6xl mx-auto px-6 flex flex-col items-center gap-12">
 
@@ -126,8 +126,7 @@ Cilj je kontinuirano unapređenje performansi i konverzija tokom vremena.`,
     variants={leftVariant}
     className="w-full md:w-3/5 flex items-center justify-center"
   >
-   <div className="backdrop-blur-xl bg-[#fafafa]/100 border border-white/10 rounded-3xl p-8 shadow-2xl w-full">
-
+  <div className="backdrop-blur-xl bg-[#fafafa]/100 border border-white/10 rounded-3xl p-0 md:p-8 shadow-2xl w-full">
   {/* Desktop */}
   <img
     src={projectImages[projectImg]}

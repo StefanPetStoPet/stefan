@@ -20,14 +20,14 @@ export default function Hero() {
 
   const h1s = [
     {
-      text: "Dizajnirano s ukusom",
+      text: "Dizajnirano sa stilom",
       // was text-[2.4rem] — hardcoded, too big on Samsung's larger-DPI screens
       className: "font-light leading-none",
       finalX: 0,
       opacity: 0.75,
     },
     {
-      text: "Izrađeno s iskustvom",
+      text: "Izrađeno iskustvom",
       className: "font-light leading-none my-1",
       finalX: 0,
       opacity: 0.9,
@@ -118,8 +118,7 @@ export default function Hero() {
             </p>
             {/* was text-2xl on mobile */}
             <p style={{ fontSize: "clamp(1.1rem, 5svw, 1.1rem)" }} className="text-[#f5f5f5]/90 leading-relaxed">
-              Učim o vašem načinu poslovanja, razmišljam strateški i dizajniram iskustva koja su napravljena da podstaknu akciju — pretvarajući posjetioce u klijente.
-            </p>
+             Svaki vlasnik online biznisa s vremenom shvati da snažan vizuelni identitet gradi povjerenje i stvara veću zaradu. Ali mnogi ne prepoznaju da strategija ima još veći uticaj.   </p>
           </div>
 
           {/* CTA */}
