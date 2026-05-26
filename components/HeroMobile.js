@@ -7,15 +7,12 @@ export default function Hero() {
   const [loaded, setLoaded] = useState(false);
   const [showBottom, setShowBottom] = useState(false);
 
-  useEffect(() => {
-    setLoaded(true);
-  }, []);
+  useEffect(() => { setLoaded(true); }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setHeroImg((prev) => (prev === 0 ? 1 : 0));
     }, 500);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -24,25 +21,30 @@ export default function Hero() {
   const h1s = [
     {
       text: "Dizajnirano s ukusom",
-      className:
-        "text-[2.4rem] sm:text-[3rem] md:text-[4.6rem] font-light leading-none",
+      // was text-[2.4rem] — hardcoded, too big on Samsung's larger-DPI screens
+      className: "font-light leading-none",
       finalX: 0,
       opacity: 0.75,
     },
     {
       text: "Izrađeno s iskustvom",
-      className:
-        "text-[2.4rem] sm:text-[3.5rem] md:text-[5.6rem] font-light leading-none my-1",
+      className: "font-light leading-none my-1",
       finalX: 0,
       opacity: 0.9,
     },
     {
       text: "Stvoreno za rezultate",
-      className:
-        "text-[2.4rem] sm:text-[3.2rem] md:text-[5.2rem] font-light leading-none",
+      className: "font-light leading-none",
       finalX: 0,
       opacity: 1,
     },
+  ];
+
+  // slight stagger per line so they feel layered
+  const fontSizes = [
+    "clamp(2rem, 9svw, 4.6rem)",
+    "clamp(2rem, 9svw, 5.6rem)",
+    "clamp(2rem, 9svw, 5.2rem)",
   ];
 
   const maxDuration = Math.max(
@@ -53,22 +55,24 @@ export default function Hero() {
   );
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowBottom(true);
-    }, maxDuration);
-
+    const timer = setTimeout(() => setShowBottom(true), maxDuration);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <section className="relative h-screen overflow-hidden pt-24">
-      
-      {/* HERO WRAPPER */}
+    <section className="relative h-[100svh] overflow-hidden pt-24">
+
       <div className="relative w-full h-full flex flex-col justify-between px-4 md:px-10 pt-10 pb-6">
 
         {/* TOP HEADLINES */}
-        <div className="flex flex-col items-start text-[#f5f5f5]">
-
+        <div
+          className="flex flex-col items-start text-[#f5f5f5]"
+          style={{
+            // kills Android Blink font-boosting — the root cause of Samsung inflation
+            WebkitTextSizeAdjust: "100%",
+            textSizeAdjust: "100%",
+          }}
+        >
           {h1s.map((item, i) => {
             const distance = Math.abs(item.finalX - baseStartX);
             const duration = (distance / 340) * 900;
@@ -79,14 +83,13 @@ export default function Hero() {
                 className={item.className}
                 style={{
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
+                  // svw = small viewport width, consistent across Samsung/iOS unlike vw
+                  fontSize: fontSizes[i],
                   transform: loaded
                     ? `translateX(${item.finalX}px)`
                     : `translateX(${baseStartX}px)`,
                   opacity: loaded ? item.opacity : 0,
-                  transition: `
-                    transform ${duration}ms cubic-bezier(0.22, 1, 0.36, 1),
-                    opacity ${duration}ms ease-out
-                  `,
+                  transition: `transform ${duration}ms cubic-bezier(0.22, 1, 0.36, 1), opacity ${duration}ms ease-out`,
                 }}
               >
                 {item.text}
@@ -105,13 +108,16 @@ export default function Hero() {
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               opacity: showBottom ? 1 : 0,
               transition: "opacity 1500ms ease-out",
+              WebkitTextSizeAdjust: "100%",
+              textSizeAdjust: "100%",
             }}
           >
-            <p className="text-4xl md:text-xl font-light leading-tight mb-4">
+            {/* was text-4xl on mobile — way too big on Samsung */}
+            <p style={{ fontSize: "clamp(2rem, 9svw, 1.25rem)" }} className="font-light leading-tight mb-4">
               Posjetioci nisu cilj — klijenti jesu.
             </p>
-
-            <p className="text-2xl md:text-xl text-[#f5f5f5]/90 leading-relaxed">
+            {/* was text-2xl on mobile */}
+            <p style={{ fontSize: "clamp(1.1rem, 5svw, 1.1rem)" }} className="text-[#f5f5f5]/90 leading-relaxed">
               Učim o vašem načinu poslovanja, razmišljam strateški i dizajniram iskustva koja su napravljena da podstaknu akciju — pretvarajući posjetioce u klijente.
             </p>
           </div>
@@ -125,8 +131,11 @@ export default function Hero() {
             }}
           >
             <div
-              className="flex items-center gap-3 px-6 md:px-9 whitespace-nowrap text-black/80 text-lg md:text-xl font-bold bg-gradient-to-r from-[#fafafa] to-[#dcdee3]"
-              style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+              className="flex items-center gap-3 px-6 md:px-9 whitespace-nowrap text-black/80 font-bold bg-gradient-to-r from-[#fafafa] to-[#dcdee3]"
+              style={{
+                fontFamily: "'Plus Jakarta Sans', sans-serif",
+                fontSize: "clamp(0.9rem, 3svw, 1.25rem)",
+              }}
             >
               <span className="text-2xl font-bold">→</span>
               <span>Moji radovi</span>

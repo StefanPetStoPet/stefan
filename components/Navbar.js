@@ -50,7 +50,7 @@ export default function Navbar() {
     >
 
       <div
-        className={`flex items-center justify-between px-10 py-6 w-full transition-all duration-700 ease-out ${
+        className={`flex items-center justify-between px-5 md:px-10 py-6 w-full transition-all duration-700 ease-out ${
           blueMode
             ? "bg-white/85 backdrop-blur-xl border border-white/15 shadow-lg"
             : "bg-transparent border-transparent"
@@ -59,7 +59,7 @@ export default function Navbar() {
 
         {/* Brand */}
         <div
-          className={`text-xl font-semibold tracking-wide transition-colors duration-500 ${
+          className={`text-xl michroma-regular font-semibold tracking-wide transition-colors duration-500 ${
             blueMode ? "text-blue-800" : "text-[#f5f5f5]"
           }`}
         >
