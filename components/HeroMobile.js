@@ -42,9 +42,9 @@ export default function Hero() {
 
   // slight stagger per line so they feel layered
   const fontSizes = [
-    "clamp(2rem, 9svw, 2.5rem)",
-    "clamp(2rem, 9svw, 2.5rem)",
-    "clamp(2rem, 9svw, 2.5rem)",
+    "clamp(1rem, 5svw, 2rem)",
+    "clamp(1rem, 5svw, 2rem)",
+    "clamp(1rem, 5svw, 2rem)",
   ];
 
   const maxDuration = Math.max(
