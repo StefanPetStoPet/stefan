@@ -42,9 +42,9 @@ export default function Hero() {
 
   // slight stagger per line so they feel layered
   const fontSizes = [
-    "clamp(2rem, 9svw, 4.6rem)",
-    "clamp(2rem, 9svw, 5.6rem)",
-    "clamp(2rem, 9svw, 5.2rem)",
+    "clamp(2rem, 9svw, 2.5rem)",
+    "clamp(2rem, 9svw, 2.5rem)",
+    "clamp(2rem, 9svw, 2.5rem)",
   ];
 
   const maxDuration = Math.max(
@@ -113,7 +113,7 @@ export default function Hero() {
             }}
           >
             {/* was text-4xl on mobile — way too big on Samsung */}
-            <p style={{ fontSize: "clamp(2rem, 9svw, 1.25rem)" }} className="font-light leading-tight mb-4">
+            <p style={{ fontSize: "clamp(2rem, 9svw, 3rem)" }} className="font-light leading-tight mb-4">
               Posjetioci nisu cilj — klijenti jesu.
             </p>
             {/* was text-2xl on mobile */}
