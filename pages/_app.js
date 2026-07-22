@@ -36,8 +36,8 @@ export default function App({ Component, pageProps }) {
 
   return (
     <NextIntlClientProvider
-  locale={pageProps.locale}
-  messages={pageProps.messages}
+  locale={pageProps.locale || "me"}
+  messages={pageProps.messages || {}}
 >
       <div className="min-h-screen bg-black">
         <Component
