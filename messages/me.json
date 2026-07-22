@@ -1,0 +1,93 @@
+{
+  "Hero": {
+    "headline1": "Dizajnirano sa stilom",
+    "headline2": "Izrađeno iskustvom",
+    "headline3": "Stvoreno za rezultate",
+    "bottomTitle": "Posjetioci nisu cilj — klijenti jesu.",
+    "bottomDescription": "Svaki vlasnik online biznisa s vremenom shvati da snažan vizuelni identitet gradi povjerenje i stvara veću zaradu. Ali mnogi ne prepoznaju da strategija ima još veći uticaj.",
+    "button": "Moji radovi"
+  },
+  "Navbar": {
+    "contact": "Kontakt"
+  },
+  "StatsSection": {
+  "title": "Nije dovoljno samo imati sajt",
+  "subtitle": "već sistem koji doprinosi rastu poslovanja",
+
+  "cards": {
+    "first": {
+      "value": "Veća prodaja sa istim brojem posjetilaca",
+      "title": "CRO optimizacija sajta povećava broj kupaca bez dodatnog ulaganja u reklame."
+    },
+    "second": {
+      "value": "Jednostavniji korisnički put",
+      "title": "Jasna UX struktura pomaže korisnicima da brže pronađu informacije i lakše donesu odluku."
+    },
+    "third": {
+      "value": "Kontinuirano unapređenje performansi",
+      "title": "Sajt se optimizuje na osnovu analitike, ponašanja korisnika i testiranja performansi."
+    }
+  },
+
+  "paragraph": "Pošto je kvalitet često teško procijeniti unaprijed, ljudi se oslanjaju na prezentaciju brenda kao pokazatelj vrijednosti, pouzdanosti i kvaliteta proizvoda ili usluge. Isto važi i za veb-sajt, dobar dizajn gradi povjerenje u vaš biznis i usluge, a kroz provjerene prakse i analitiku ponašanja korisnika, posjetioci se lakše usmjeravaju ka kontaktu ili kupovini. To je cilj svakog mog rada."
+},
+"ProjectShowcase": {
+  "heading": "Moj proces",
+  "subheading": "analiza, dizajn, izrada, CRO",
+  "back": "Nazad",
+
+  "items": {
+    "analysis": {
+      "title": "Analiza ciljane publike",
+      "subtitle": "Razumijevanje za koga dizajniramo",
+      "text": "Svaki projekat počinje analiziranjem vaše publike.\n\nAnaliziram ponašanje korisnika, njihova očekivanja i namjeru — šta traže, šta ih motiviše i šta ih dovodi do konverzije.\n\nKombinovanjem toga sa analizom konkurencije i provjerenim obrascima, gradim jasnu osnovu za odluke koje nisu zasnovane na pretpostavkama, već na onome što zaista funkcioniše."
+    },
+
+    "cro": {
+      "title": "CRO Dizajn",
+      "subtitle": "Dizajn koji pretvara pažnju u prodaju",
+      "text": "Dizajn nije tu da samo izgleda dobro — već da vodi korisnika ka akciji.\n\nStrukturiram layout, hijerarhiju i tokove na osnovu CRO principa:\n• jasnoća poruke\n• jaka vizuelna hijerarhija\n• jednostavno korisničko iskustvo\n\nSvaki element ima svoju svrhu — da poveća angažman, povjerenje i prodaju."
+    },
+
+    "implementation": {
+      "title": "Implementacija",
+      "subtitle": "Od dizajna do gotovog proizvoda",
+      "text": "Nakon što definišem dizajn u Figmi, pretvaram ga u funkcionalan proizvod kroz programiranje, bez gotovih template rješenja.\n\nFokus je na performansama, SEO i AEO strukturi, sigurnosti i skalabilnosti.\n\nKoristim Next.js, Tailwind i Supabase za custom web rješenja, a Shopify za e-commerce projekte.\n\nPošto razumijem i dizajn i development, cijeli proces je usklađen i bez kompromisa u kvalitetu."
+    },
+
+    "optimization": {
+      "title": "Održavanje + Analitika i optimizacija",
+      "subtitle": "Kontinuirano poboljšavanje",
+      "text": "Lansiranje je tek početak.\n\nAnaliziram kako korisnici koriste sajt koristeći alate kao što su Google Analytics 4 (GA4), Google Tag Manager, heatmaps (Clarity/Hotjar) i event tracking, kako bih identifikovao mogućnosti za poboljšanje.\n\nOvo je ključno jer odluke više nisu zasnovane na pretpostavkama, već na stvarnom ponašanju korisnika i podacima koji direktno utiču na konverzije.\n\n• praćenje ponašanja korisnika kroz heatmaps i evente\n• uvidi u konverzije i funnel analitiku\n• optimizacija performansi i stabilnosti (Core Web Vitals, Sentry)\n• testiranje i iteracije za bolje rezultate\n\nCilj je kontinuirano unapređenje performansi i konverzija tokom vremena."
+    }
+  }
+},
+"ProductsSection": {
+  "visit": "Posjeti sajt"
+},
+"Footer": {
+  "heading": "Započni konverzaciju",
+  "reply": "Odgovaram u roku od par sati — najbrže preko WhatsApp-a.",
+  "note": "Ozbiljan biznis zahtijeva više od prosječnog sajta",
+
+  "contacts": {
+    "whatsapp": {
+      "title": "WhatsApp",
+      "text": "Odgovor u roku od 60 minuta.",
+      "button": "Poruka na WhatsApp"
+    },
+
+    "email": {
+      "title": "Email",
+      "text": "Pošaljite mi detalje vašeg projekta.",
+      "button": "stefankp505@gmail.com"
+    },
+
+    "phone": {
+      "title": "Poziv",
+      "text": "Direktan razgovor za duže dogovore.",
+      "button": "+382 69 458 654"
+    }
+  }
+}
+}

@@ -1,8 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
+  const t = useTranslations("Hero");
+
   const [heroImg, setHeroImg] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [showBottom, setShowBottom] = useState(false);
@@ -20,20 +23,20 @@ export default function Hero() {
 
   const h1s = [
     {
-      text: "Dizajnirano sa stilom",
+      text: t("headline1"),
       // was text-[2.4rem] — hardcoded, too big on Samsung's larger-DPI screens
       className: "font-light leading-none",
       finalX: 0,
       opacity: 0.75,
     },
     {
-      text: "Izrađeno iskustvom",
+      text: t("headline2"),
       className: "font-light leading-none my-1",
       finalX: 0,
       opacity: 0.9,
     },
     {
-      text: "Stvoreno za rezultate",
+      text: t("headline3"),
       className: "font-light leading-none",
       finalX: 0,
       opacity: 1,
@@ -114,11 +117,11 @@ export default function Hero() {
           >
             {/* was text-4xl on mobile — way too big on Samsung */}
             <p style={{ fontSize: "clamp(2rem, 9svw, 3rem)" }} className="font-light leading-tight mb-4">
-              Posjetioci nisu cilj — klijenti jesu.
+              {t("bottomTitle")}
             </p>
             {/* was text-2xl on mobile */}
             <p style={{ fontSize: "clamp(1.1rem, 5svw, 1.1rem)" }} className="text-[#f5f5f5]/90 leading-relaxed">
-             Svaki vlasnik online biznisa s vremenom shvati da snažan vizuelni identitet gradi povjerenje i stvara veću zaradu. Ali mnogi ne prepoznaju da strategija ima još veći uticaj.   </p>
+             {t("bottomDescription")}   </p>
           </div>
 
           {/* CTA */}
@@ -137,7 +140,7 @@ export default function Hero() {
               }}
             >
               <span className="text-2xl font-bold">→</span>
-              <span>Moji radovi</span>
+              <span>{t("button")}</span>
             </div>
 
             <div className="p-2 bg-[#dcdee3]">

@@ -1,0 +1,93 @@
+{
+  "Hero": {
+    "headline1": "Designed with style",
+    "headline2": "Built with experience",
+    "headline3": "Created for results",
+    "bottomTitle": "Visitors are not the goal — customers are.",
+    "bottomDescription": "Every online business owner eventually realizes that a strong visual identity builds trust and drives more revenue. But many fail to recognize that strategy has an even greater impact.",
+    "button": "My work"
+  },
+  "Navbar": {
+    "contact": "Contact"
+  },
+  "StatsSection": {
+  "title": "Having a website isn't enough",
+  "subtitle": "you need a system that helps your business grow",
+
+  "cards": {
+    "first": {
+      "value": "Higher sales with the same number of visitors",
+      "title": "Conversion Rate Optimization helps turn more visitors into customers without increasing your advertising budget."
+    },
+    "second": {
+      "value": "A simpler customer journey",
+      "title": "A clear user experience helps visitors find information faster and make decisions with confidence."
+    },
+    "third": {
+      "value": "Continuous performance improvement",
+      "title": "Your website is continuously optimized using analytics, user behavior, and performance testing."
+    }
+  },
+
+  "paragraph": "Because quality is often difficult to judge in advance, people rely on a brand's presentation as a signal of value, reliability, and the quality of its products or services. The same applies to your website. Strong design builds trust in your business, while proven UX practices, analytics, and user behavior insights guide visitors more naturally toward making a purchase or getting in touch. That is the goal behind every website I create."
+},
+"ProjectShowcase": {
+  "heading": "My Process",
+  "subheading": "research, design, development, CRO",
+  "back": "Back",
+
+  "items": {
+    "analysis": {
+      "title": "Target Audience Research",
+      "subtitle": "Understanding who we're designing for",
+      "text": "Every project starts with understanding your audience.\n\nI analyze user behavior, expectations, and intent—what they're looking for, what motivates them, and what drives them to convert.\n\nCombined with competitor research and proven UX patterns, this creates a solid foundation for decisions based on real data rather than assumptions."
+    },
+
+    "cro": {
+      "title": "Conversion-Focused Design",
+      "subtitle": "Design that turns attention into sales",
+      "text": "Design isn't just about looking good—it's about guiding users toward taking action.\n\nI structure layouts, visual hierarchy, and user flows using proven CRO principles:\n• clear messaging\n• strong visual hierarchy\n• intuitive user experience\n\nEvery element has a purpose: increasing engagement, building trust, and improving conversions."
+    },
+
+    "implementation": {
+      "title": "Development",
+      "subtitle": "From design to a finished product",
+      "text": "Once the design is finalized in Figma, I transform it into a fully functional website through custom development—without relying on generic templates.\n\nThe focus is on performance, SEO, AEO, security, and scalability.\n\nI use Next.js, Tailwind CSS, and Supabase for custom web applications, and Shopify for e-commerce projects.\n\nBecause I understand both design and development, the entire process stays aligned without compromising quality."
+    },
+
+    "optimization": {
+      "title": "Maintenance, Analytics & Optimization",
+      "subtitle": "Continuous improvement",
+      "text": "Launching your website is only the beginning.\n\nI analyze how users interact with your website using tools like Google Analytics 4 (GA4), Google Tag Manager, heatmaps (Microsoft Clarity / Hotjar), and event tracking to uncover opportunities for improvement.\n\nThis ensures decisions are based on real user behavior instead of assumptions.\n\n• user behavior tracking through heatmaps and events\n• conversion and funnel analysis\n• performance and stability optimization (Core Web Vitals, Sentry)\n• ongoing testing and iterations for better results\n\nThe goal is continuous improvement in both website performance and conversion rates over time."
+    }
+  }
+},
+"ProductsSection": {
+  "visit": "Visit website"
+},
+"Footer": {
+  "heading": "Let's Start a Conversation",
+  "reply": "I usually reply within a few hours — fastest via WhatsApp.",
+  "note": "A serious business deserves more than an average website.",
+
+  "contacts": {
+    "whatsapp": {
+      "title": "WhatsApp",
+      "text": "Response within 60 minutes.",
+      "button": "Message on WhatsApp"
+    },
+
+    "email": {
+      "title": "Email",
+      "text": "Send me the details of your project.",
+      "button": "stefankp505@gmail.com"
+    },
+
+    "phone": {
+      "title": "Call",
+      "text": "A direct conversation for larger projects.",
+      "button": "+382 69 458 654"
+    }
+  }
+}
+}

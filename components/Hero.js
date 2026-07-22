@@ -1,8 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
+  const t = useTranslations("Hero");
+
   const [heroImg, setHeroImg] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [showBottom, setShowBottom] = useState(false);
@@ -30,21 +33,21 @@ const images = [
 
  const h1s = [
   {
-    text: "Dizajnirano sa stilom",
+    text: t("headline1"),
     className:
       "text-[clamp(2.7rem,5vw,6.5rem)] font-light leading-none mb-10",
     finalX: -240,
     opacity: 0.85,
   },
   {
-    text: "Izrađeno iskustvom",
+    text: t("headline2"),
     className:
       "text-[clamp(3rem,6vw,7rem)] font-light leading-none my-1 mb-10",
     finalX: 0,
     opacity: 1,
   },
   {
-    text: "Stvoreno za rezultate",
+    text: t("headline3"),
     className:
       "text-[clamp(2.7rem,5.5vw,6.5rem)] font-light leading-none",
     finalX: 200,
@@ -128,11 +131,11 @@ const images = [
             }}
           >
            <p className="text-2xl font-light leading-tight mb-3">
-  Posjetioci nisu cilj — klijenti jesu.
+  {t("bottomTitle")}
 </p>
 
 <p className="text-xl text-[#f5f5f5]/90 leading-relaxed">
-  Svaki vlasnik online biznisa s vremenom shvati da snažan vizuelni identitet gradi povjerenje i stvara veću zaradu. Ali mnogi ne prepoznaju da strategija ima još veći uticaj.</p>
+  {t("bottomDescription")}</p>
           </div>
 
           {/* RIGHT CTA */}
@@ -150,7 +153,7 @@ const images = [
               style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
             >
               <span className="text-2xl font-bold">→</span>
-              <span>Moji radovi</span>
+              <span>{t("button")}</span>
             </div>
 
             <div className="p-2 bg-[#dcdee3]">

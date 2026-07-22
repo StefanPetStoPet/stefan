@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useTranslations } from "next-intl";
 
 
   
@@ -51,10 +52,11 @@ const item = {
 };
 
 const ScrollRevealText = () => {
+  const t = useTranslations("StatsSection");
+
   const ref = useRef(null);
 
-  const text =
-  "Pošto je kvalitet često teško procijeniti unaprijed, ljudi se oslanjaju na prezentaciju brenda kao pokazatelj vrijednosti, pouzdanosti i kvaliteta proizvoda ili usluge. Isto važi i za veb-sajt, dobar dizajn gradi povjerenje u vaš biznis i usluge, a kroz provjerene prakse i analitiku ponašanja korisnika, posjetioci se lakše usmjeravaju ka kontaktu ili kupovini. To je cilj svakog mog rada.";
+  const text = t("paragraph");
   const words = text.split(" ");
 
   const { scrollYProgress } = useScroll({
@@ -98,23 +100,22 @@ const Word = ({ word, scrollYProgress, start, end }) => {
 
 
 export default function StatsSection() {
+  const t = useTranslations("StatsSection");
+  
   const stats = [
   {
-    value: "Veća prodaja sa istim brojem posjetilaca",
-    title:
-      "CRO optimizacija sajta povećava broj kupaca bez dodatnog ulaganja u reklame.",
+    value: t("cards.first.value"),
+    title: t("cards.first.title"),
     desc: "",
   },
   {
-    value: "Jednostavniji korisnički put",
-    title:
-      "Jasna UX struktura pomaže korisnicima da brže pronađu informacije i lakše donesu odluku.",
+    value: t("cards.second.value"),
+    title: t("cards.second.title"),
     desc: "",
   },
   {
-    value: "Kontinuirano unapređenje performansi",
-    title:
-      "Sajt se optimizuje na osnovu analitike, ponašanja korisnika i testiranja performansi.",
+    value: t("cards.third.value"),
+    title: t("cards.third.title"),
     desc: "",
   },
 ];
@@ -152,7 +153,7 @@ export default function StatsSection() {
           variants={lineVariant}
           className="text-4xl md:text-6xl font-semibold text-white"
         >
-          Nije dovoljno samo imati sajt
+          {t("title")}
         </motion.h2>
       </div>
 
@@ -163,7 +164,7 @@ export default function StatsSection() {
           variants={lineVariant}
           className="text-2xl md:text-5xl text-white block"
         >
-          već sistem koji doprinosi rastu poslovanja
+          {t("subtitle")}
         </motion.span>
       </div>
     </motion.div>

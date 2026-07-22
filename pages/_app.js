@@ -9,13 +9,14 @@
 
 import { useEffect, useState } from "react";
 import "@/styles/globals.css";
-import { useRouter } from "next/router";
+import { NextIntlClientProvider } from "next-intl";
 
 export default function App({ Component, pageProps }) {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem("theme");
+
     if (stored === "dark") {
       setDarkMode(true);
       document.documentElement.classList.add("dark");
@@ -32,13 +33,19 @@ export default function App({ Component, pageProps }) {
     }
   }, [darkMode]);
 
+
   return (
-    <div className="min-h-screen bg-black">
-      <Component
-        {...pageProps}
-        darkMode={darkMode}
-        toggleDarkMode={() => setDarkMode(!darkMode)}
-      />
-    </div>
+    <NextIntlClientProvider
+  locale={pageProps.locale}
+  messages={pageProps.messages}
+>
+      <div className="min-h-screen bg-black">
+        <Component
+          {...pageProps}
+          darkMode={darkMode}
+          toggleDarkMode={() => setDarkMode(!darkMode)}
+        />
+      </div>
+    </NextIntlClientProvider>
   );
 }

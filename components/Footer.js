@@ -1,36 +1,41 @@
 import { useState } from "react";
 import { FaFacebookF, FaInstagram, FaGithub } from "react-icons/fa";
 import { Icon } from "@iconify/react";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("Footer");
+  
   const [active, setActive] = useState("whatsapp");
 
   const contacts = {
-    whatsapp: {
-      title: "WhatsApp",
-      icon: "mdi:whatsapp",
-      color: "from-green-400 to-green-600",
-      text: "Odgovor u roku od 60 minuta.",
-      value: "Poruka na WhatsApp",
-      action: "https://wa.me/38269458654",
-    },
-    email: {
-      title: "Email",
-      icon: "mdi:gmail",
-      color: "from-red-400 to-yellow-400",
-      text: "Pošaljite mi detalje vašeg projekta.",
-      value: "stefankp505@gmail.com",
-      action: "mailto:stefankp505@gmail.com",
-    },
-    phone: {
-      title: "Poziv",
-      icon: "mdi:phone",
-      color: "from-blue-400 to-indigo-600",
-      text: "Direktan razgovor za duze dogovore.",
-      value: "+382 69 458 654",
-      action: "tel:+38269458654",
-    },
-  };
+  whatsapp: {
+    title: t("contacts.whatsapp.title"),
+    icon: "mdi:whatsapp",
+    color: "from-green-400 to-green-600",
+    text: t("contacts.whatsapp.text"),
+    value: t("contacts.whatsapp.button"),
+    action: "https://wa.me/38269458654",
+  },
+
+  email: {
+    title: t("contacts.email.title"),
+    icon: "mdi:gmail",
+    color: "from-red-400 to-yellow-400",
+    text: t("contacts.email.text"),
+    value: t("contacts.email.button"),
+    action: "mailto:stefankp505@gmail.com",
+  },
+
+  phone: {
+    title: t("contacts.phone.title"),
+    icon: "mdi:phone",
+    color: "from-blue-400 to-indigo-600",
+    text: t("contacts.phone.text"),
+    value: t("contacts.phone.button"),
+    action: "tel:+38269458654",
+  },
+};
 
   const activeContact = contacts[active];
 
@@ -60,7 +65,7 @@ export default function Footer() {
 
         {/* TITLE */}
         <h2 className="text-5xl md:text-6xl font-semibold text-white text-center mb-10">
-          Zapocni konverzaciju
+          {t("heading")}
         </h2>
 
         {/* CONTACT TABS CARD */}
@@ -102,7 +107,7 @@ export default function Footer() {
               </p>
 
               <p className="text-white/70 text-sm">
-                Odgovaram u roku od par sati — najbrže preko WhatsApp-a.
+                {t("reply")}
               </p>
             </div>
 
@@ -153,7 +158,7 @@ export default function Footer() {
 
         {/* FOOTER NOTE */}
         <p className="mt-8 text-white/40 text-sm text-center">
-          Ozbiljan biznis zahtijeva više od prosječnog sajta
+          {t("note")}
         </p>
       </div>
     </section>

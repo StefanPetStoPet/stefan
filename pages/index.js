@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Head from "next/head";
 import Navbar from "../components/Navbar";
 import ProjectShowcase from "../components/ProjectShowcase";
 import DesignProcess from "../components/DesignProcess";
@@ -84,6 +85,15 @@ export default function Home() {
   // =====================
   return (
      <>
+     <Head>
+      <title>Stefan Koprivica | Web dizajn i razvoj</title>
+      <meta
+        name="description"
+        content="Izrađujem moderne web sajtove i Shopify prodavnice fokusirane na korisničko iskustvo, dizajn i rezultate."
+      />
+      <html lang="me" />
+    </Head>
+    
   {/* BACKGROUND VIDEO */}
   <video
     className="fixed inset-0 w-full h-full object-cover z-0"
@@ -118,4 +128,15 @@ export default function Home() {
   </main>
     </>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      locale: "me",
+      messages: (
+        await import("../messages/me.json")
+      ).default,
+    },
+  };
 }

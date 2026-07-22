@@ -1,10 +1,13 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function Navbar() {
   const [blueMode, setBlueMode] = useState(false);
   const [showNav, setShowNav] = useState(true);
+
+  const t = useTranslations("Navbar");
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -75,7 +78,7 @@ export default function Navbar() {
               : "bg-white text-black hover:bg-white/90"
           }`}
         >
-          Kontakt
+          {t("contact")}
         </a>
 
       </div>

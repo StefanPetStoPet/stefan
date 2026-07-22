@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
+import { useTranslations } from "next-intl";
 import {
   FaLightbulb,
   FaChartLine,
@@ -46,6 +47,7 @@ export default function ProjectShowcase({
   mobileImages,
   projectImg,
 }) {
+  const t = useTranslations("ProjectShowcase");
   const [activeItem, setActiveItem] = useState(null);
 
   const sectionRef = useRef(null);
@@ -54,56 +56,28 @@ export default function ProjectShowcase({
   const items = [
   {
     icon: <FaLightbulb />,
-    title: "Analiza ciljane publike",
-    subtitle: "Razumijevanje za koga dizajniramo",
-    text: `Svaki projekat počinje analiziranjem vaše publike.
-
-Analiziram ponašanje korisnika, njihova očekivanja i namjeru — šta traže, šta ih motiviše i šta ih dovodi do konverzije.
-
-Kombinovanjem toga sa analizom konkurencije i provjerenim obrascima, gradim jasnu osnovu za odluke koje nisu zasnovane na pretpostavkama, već na onome što zaista funkcioniše.`,
+    title: t("items.analysis.title"),
+    subtitle: t("items.analysis.subtitle"),
+    text: t("items.analysis.text"),
   },
   {
     icon: <FaChartLine />,
-    title: "CRO Dizajn",
-    subtitle: "Dizajn koji pretvara pažnju u prodaju",
-    text: `Dizajn nije tu da samo izgleda dobro — već da vodi korisnika ka akciji.
-
-Strukturiram layout, hijerarhiju i tokove na osnovu CRO principa:
-• jasnoća poruke  
-• jaka vizuelna hijerarhija  
-• jednostavno korisničko iskustvo  
-
-Svaki element ima svoju svrhu — da poveća angažman, povjerenje i prodaju.`,
+    title: t("items.cro.title"),
+    subtitle: t("items.cro.subtitle"),
+    text: t("items.cro.text"),
   },
   {
     icon: <FaProjectDiagram />,
-    title: "Implementacija",
-    subtitle: "Od dizajna do gotovog proizvoda",
-    text: `Nakon što definišem dizajn u Figmi, pretvaram ga u funkcionalan proizvod kroz programiranje, bez gotovih template rješenja.
-
-Fokus je na performansama, SEO i AEO strukturi, sigurnosti i skalabilnosti.
-
-Koristim Next.js, Tailwind i Supabase za custom web rješenja, a Shopify za e-commerce projekte.
-
-Pošto razumijem i dizajn i development, cijeli proces je usklađen i bez kompromisa u kvalitetu.`,
-},
+    title: t("items.implementation.title"),
+    subtitle: t("items.implementation.subtitle"),
+    text: t("items.implementation.text"),
+  },
   {
     icon: <FaRocket />,
-    title: "Održavanje + Analitika i optimizacija",
-    subtitle: "Kontinuirano poboljšavanje",
-    text: `Lansiranje je tek početak.
-
-Analiziram kako korisnici koriste sajt koristeći alate kao što su Google Analytics 4 (GA4), Google Tag Manager, heatmaps (Clarity/Hotjar) i event tracking, kako bih identifikovao mogućnosti za poboljšanje.
-
-Ovo je ključno jer odluke više nisu zasnovane na pretpostavkama, već na stvarnom ponašanju korisnika i podacima koji direktno utiču na konverzije.
-
-• praćenje ponašanja korisnika kroz heatmaps i evente  
-• uvidi u konverzije i funnel analitiku  
-• optimizacija performansi i stabilnosti (Core Web Vitals, Sentry)  
-• testiranje i iteracije za bolje rezultate  
-
-Cilj je kontinuirano unapređenje performansi i konverzija tokom vremena.`,
-},
+    title: t("items.optimization.title"),
+    subtitle: t("items.optimization.subtitle"),
+    text: t("items.optimization.text"),
+  },
 ];
 
   return (
@@ -178,10 +152,10 @@ Cilj je kontinuirano unapređenje performansi i konverzija tokom vremena.`,
 
             <div className="mb-6">
               <h2 className="text-2xl font-semibold text-black/85">
-                Moj proces
+                {t("heading")}
               </h2>
               <p className="text-black/50 text-sm mt-1">
-                analiza, dizajn, izrada, CRO
+                {t("subheading")}
               </p>
             </div>
 
@@ -222,7 +196,7 @@ Cilj je kontinuirano unapređenje performansi i konverzija tokom vremena.`,
               onClick={() => setActiveItem(null)}
               className="mb-6 text-black/50 hover:text-black transition text-sm"
             >
-              ← Nazad
+              ← {t("back")}
             </button>
 
             <div className="flex items-center gap-3 mb-2">
